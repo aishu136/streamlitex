@@ -10,6 +10,7 @@ class_labels = list(classes.values())
 st.title("Classification of Iris Species")
 st.markdown('**Objective** : Given details about the flower we try to predict the species.')
 st.markdown('The model can predict if it belongs to the following three Categories : **setosa, versicolor, virginica** ')
+st.set_option('deprecation.showPyplotGlobalUse', False)
 def predict_class():
     data = list(map(float,[sepal_length,sepal_width,petal_length, petal_width]))
     result, probs = predict(data)
